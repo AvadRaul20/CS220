@@ -12,13 +12,43 @@ The goal of this assignment is to attempt to process images using higher order f
 structures like for and while loops. We should manage to use different HOFs such as reduce, filter, and map
 in order to achieve the following functions: 
 
-ImageMapXY: The result must be a new image with the same dimensions as img.
-The value of each pixel in the new image should be the result of
-applying func to the corresponding pixel of img.
 <imageMapXY(img: Image, func: (img: Image, x: number, y: number) => Pixel): Image>
 
+The result must be a new image with the same dimensions as img.
+The value of each pixel in the new image should be the result of
+applying func to the corresponding pixel of img.
 
-#Project 3 - More Higher Order Functions and Image Processing
+
+<imageMask(img: Image, cond: (img: Image, x: number, y: number) => boolean, maskValue: Pixel): Image>
+
+The result must be a new image, in which the value of the pixel
+at (x, y) is either (a) identical to the value of the pixel at (x, y) in
+the original image when cond(img, x, y) returns false or
+(b) the value maskValue when cond(img, x, y) returns true.
+
+<imageMapCond(img: Image, cond: (img: Image, x: number, y: number) => boolean, func: (p: Pixel) => Pixel): Image>
+
+The result must be a new image, where the value of pixel at (x, y) is either (a) identical to the value of the
+pixel at (x, y) in the original image when cond(img, x, y) returns false or (b) the value func(p),
+where p is the original pixel, when cond(img, x, y) returns true.
+
+<isGrayish(p: Pixel): boolean>
+
+The result should be true if and only if the difference between the maximum and minimum color channel
+value is at most 1/3
+
+<grayHalfImage(img: Image): Image>
+
+The result must be a new image that is the half-grayed version of the argument, where the top part of the
+image is grayed out and the bottom part of the image is in color. If the y-position is less than half of the
+image height, then transform this part like with the makeGrayish function above.
+
+<blackenLow(img: Image): Image>
+
+The result must be a new image where, for each pixel, any channel value lower than 1/3 is set to 0 for the
+corresponding pixel in the new image. Other channels for the pixel are not modified.
+
+# Project 3 - More Higher Order Functions and Image Processing
 
 
 # Project 4a & 4b - Oracles and Stable Matching
