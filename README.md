@@ -39,9 +39,11 @@ below 2 stars?” The fluent design thus allows the queries to be chained in arb
 specified constraints, much like a user might wish to, on the Yelp website, to find specific
 restaurants of interest. For example, here is how you would use the class FluentRestaurants
 to run two queries:
-let data =
- lib220.loadJSONFromURL('https://people.cs.umass.edu/~joydeepb/yelp.json');
+
+let data = lib220.loadJSONFromURL('https://people.cs.umass.edu/~joydeepb/yelp.json');
+
 let f = new FluentRestaurants(data);
+
 f.ratingLeq(5)
  .ratingGeq(3)
  .category('Restaurants')
