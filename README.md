@@ -8,6 +8,17 @@ programming languages (e.g., Java). You will use these features to write several
 processing. 
 
 # Project 2 - Higher Order Functions and Image Processing
+The goal of this assignment is to attempt to process images using higher order functions instead of elementary
+structures like for and while loops. We should manage to use different HOFs such as reduce, filter, and map
+in order to achieve the following functions: 
+
+ImageMapXY: The result must be a new image with the same dimensions as img.
+The value of each pixel in the new image should be the result of
+applying func to the corresponding pixel of img.
+<imageMapXY(img: Image, func: (img: Image, x: number, y: number) => Pixel): Image>
+
+
+#Project 3 - More Higher Order Functions and Image Processing
 
 
 # Project 4a & 4b - Oracles and Stable Matching
